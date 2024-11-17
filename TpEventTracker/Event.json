@@ -1,0 +1,22 @@
+{
+  "guid": "5c90e1dd-c9d2-4064-8e95-dd95a495d5cb",
+  "slug": "star-reign-championship-2024",
+  "name": "Star Reign Championship 2024",
+  "date": "2024-12-15",
+  "location": {
+    "id": 1,
+    "name": "Accor Arena",
+    "address": "8 Boulevard de Bercy",
+    "city": "Paris",
+    "postalcode": "75012",
+    "capacity": 20000
+  },
+  "description": "Plongez dans l'univers galactique de Star Reign ! Assistez à la compétition ultime où les meilleurs pilotes s'affrontent pour dominer la galaxie et remporter le titre. Profitez de spectacles en direct, des cadeaux et d'une zone de jeu libre pour le public.",
+  "max_participants": 1000,
+  "current_participants": 741,
+  "status": "open",
+  "tags": [ "eSport", "Star Reign", "gaming", "tournoi", "compétition" ],
+  "prize_pool": "500,000 EUR",
+  "sponsors": [ "Logitech", "Red Bull", "Alienware" ],
+  "streaming_url": "https://twitch.tv/star_reign_championship_2024"
+}

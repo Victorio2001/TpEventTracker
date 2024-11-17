@@ -1,0 +1,90 @@
+[
+  {
+    "guid": "5c90e1dd-c9d2-4064-8e95-dd95a495d5cb",
+    "slug": "star-reign-championship-2024",
+    "name": "Star Reign Championship 2024",
+    "date": "2024-12-15",
+    "location": {
+      "id":  1,
+      "name": "Accor Arena",
+      "address": "8 Boulevard de Bercy",
+      "city": "Paris",
+      "postalcode": "75012",
+      "capacity": 20000
+    },
+    "description": "Plongez dans l'univers galactique de Star Reign ! Assistez à la compétition ultime où les meilleurs pilotes s'affrontent pour dominer la galaxie et remporter le titre. Profitez de spectacles en direct, des cadeaux et d'une zone de jeu libre pour le public.",
+    "max_participants": 1000,
+    "current_participants": 741,
+    "status": "open",
+    "tags": [ "eSport", "Star Reign", "gaming", "tournoi", "compétition" ],
+    "prize_pool": "500,000 EUR",
+    "sponsors": [ "Logitech", "Red Bull", "Alienware" ],
+    "streaming_url": "https://twitch.tv/star_reign_championship_2024"
+  },
+  {
+    "guid": "2f4e1abc-1234-5678-9101-bbcd5678abcd",
+    "slug": "battle-circuit-showdown-2024",
+    "name": "Battle Circuit Showdown 2024",
+    "date": "2024-09-30",
+    "location": {
+      "id": 2,
+      "name": "Stade de France",
+      "address": "ZAC du Cornillon Nord, 93216",
+      "city": "Saint-Denis",
+      "postalcode": "93216",
+      "capacity": 80000
+    },
+    "description": "Rejoignez le Battle Circuit pour une compétition explosive où les meilleurs combattants cybernétiques s'affrontent dans des arènes de haute technologie. Un show rempli de cascades, de stratégies et de moments spectaculaires.",
+    "max_participants": 800,
+    "current_participants": 650,
+    "status": "open",
+    "tags": [ "eSport", "Battle Circuit", "combat", "tournoi", "compétition" ],
+    "prize_pool": "250,000 USD",
+    "sponsors": [ "HyperX", "Monster Energy", "Corsair" ],
+    "streaming_url": "https://youtube.com/battle_circuit_showdown_2024"
+  },
+  {
+    "guid": "7f91b7cd-2345-6789-1234-aabbccddee88",
+    "slug": "mythic-arena-clash-2024",
+    "name": "Mythic Arena Clash 2024",
+    "date": "2024-10-20",
+    "location": {
+      "id": 3,
+      "name": "Zenith de Toulouse",
+      "address": "11 Avenue Raymond Badiou",
+      "city": "Toulouse",
+      "postalcode": "31300",
+      "capacity": 9000
+    },
+    "description": "Affrontez des légendes dans le Mythic Arena Clash ! Des équipes de héros mystiques se battent dans un monde fantastique, avec magie et compétences extraordinaires. Une compétition où chaque mouvement peut changer le destin de la bataille.",
+    "max_participants": 1200,
+    "current_participants": 1132,
+    "status": "closed",
+    "tags": [ "eSport", "Mythic Arena", "fantasy", "tournoi", "compétition" ],
+    "prize_pool": "1,000,000 JPY",
+    "sponsors": [ "Sony", "Asus", "Intel" ],
+    "streaming_url": "https://twitch.tv/mythic_arena_clash_2024"
+  },
+  {
+    "guid": "9a12cd34-3456-7890-abcd-ef0123456789",
+    "slug": "shadow-racers-grand-prix-2024",
+    "name": "Shadow Racers Grand Prix 2024",
+    "date": "2024-11-10",
+    "location": {
+      "id": 4,
+      "name": "Halle Tony Garnier",
+      "address": "20 Place des Docteurs Mérieux",
+      "city": "Lyon",
+      "postalcode": "69007",
+      "capacity": 17000
+    },
+    "description": "Préparez-vous pour la course la plus palpitante de l'année ! Les meilleurs pilotes de Shadow Racers s'affrontent sur des circuits futuristes à grande vitesse pour décrocher le trophée ultime.",
+    "max_participants": 600,
+    "current_participants": 578,
+    "status": "open",
+    "tags": [ "eSport", "Shadow Racers", "course", "tournoi", "compétition" ],
+    "prize_pool": "300,000 GBP",
+    "sponsors": [ "Nvidia", "Michelin", "Acer" ],
+    "streaming_url": "https://facebook.com/shadow_racers_grand_prix_2024"
+  }
+]
