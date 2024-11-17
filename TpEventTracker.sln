@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TpEventTracker", "TpEventTracker\TpEventTracker.csproj", "{5D41AA1B-597C-4B36-AF98-1FE6ECFB18B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventTracker.Model", " EventTracker.Model\EventTracker.Model.csproj", "{12439F13-E82E-418D-ACAD-CF068B44DB31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventTracker.DataSource", "EventTracker.DataSource\EventTracker.DataSource.csproj", "{644B1F62-DE4E-424F-9840-5C3D8D775F61}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{5D41AA1B-597C-4B36-AF98-1FE6ECFB18B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D41AA1B-597C-4B36-AF98-1FE6ECFB18B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D41AA1B-597C-4B36-AF98-1FE6ECFB18B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12439F13-E82E-418D-ACAD-CF068B44DB31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12439F13-E82E-418D-ACAD-CF068B44DB31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12439F13-E82E-418D-ACAD-CF068B44DB31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12439F13-E82E-418D-ACAD-CF068B44DB31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{644B1F62-DE4E-424F-9840-5C3D8D775F61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{644B1F62-DE4E-424F-9840-5C3D8D775F61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{644B1F62-DE4E-424F-9840-5C3D8D775F61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{644B1F62-DE4E-424F-9840-5C3D8D775F61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
