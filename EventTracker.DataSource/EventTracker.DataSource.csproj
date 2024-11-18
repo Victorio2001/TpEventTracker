@@ -7,8 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\ EventTracker.Model\EventTracker.Model.csproj" />
-        <ProjectReference Include="..\EventTracker.Model\EventTracker.Model.csproj" />
+      <ProjectReference Include="..\ EventTracker.Model\EventTracker.Model.csproj" />
     </ItemGroup>
 
 </Project>

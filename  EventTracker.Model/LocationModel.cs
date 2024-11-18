@@ -7,21 +7,21 @@ namespace EventTracker.Model
     public class LocationModel
     {
         [JsonPropertyName("id")]
-        public int Id { get; set; }
+        public int? Id { get; set; }
 
         [JsonPropertyName("name")]
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         [JsonPropertyName("address")]
-        public string Address { get; set; }
+        public string? Address { get; set; }
 
         [JsonPropertyName("city")]
-        public string City { get; set; }
+        public string? City { get; set; }
 
         [JsonPropertyName("postalcode")]
-        public string PostalCode { get; set; }
+        public string? PostalCode { get; set; }
 
         [JsonPropertyName("capacity")]
-        public int Capacity { get; set; }
+        public int? Capacity { get; set; }
     }
 }

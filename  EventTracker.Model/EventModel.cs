@@ -7,42 +7,42 @@ namespace EventTracker.Model
     public class EventModel
     {
         [JsonPropertyName("guid")]
-        public string Guid { get; set; }
+        public string? Guid { get; set; }
 
         [JsonPropertyName("slug")]
-        public string Slug { get; set; }
+        public string? Slug { get; set; }
 
         [JsonPropertyName("name")]
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         [JsonPropertyName("date")]
-        public DateTime Date { get; set; }
+        public DateTime? Date { get; set; }
 
         [JsonPropertyName("location")]
-        public LocationModel Location { get; set; }
+        public LocationModel? Location { get; set; }
 
         [JsonPropertyName("description")]
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
         [JsonPropertyName("max_participants")]
-        public int MaxParticipants { get; set; }
+        public int? MaxParticipants { get; set; }
 
         [JsonPropertyName("current_participants")]
-        public int CurrentParticipants { get; set; }
+        public int? CurrentParticipants { get; set; }
 
         [JsonPropertyName("status")]
-        public string Status { get; set; }
+        public string? Status { get; set; }
 
         [JsonPropertyName("tags")]
-        public List<string> Tags { get; set; }
+        public List<string>? Tags { get; set; }
 
         [JsonPropertyName("prize_pool")]
-        public string PrizePool { get; set; }
+        public string? PrizePool { get; set; }
 
         [JsonPropertyName("sponsors")]
-        public List<string> Sponsors { get; set; }
+        public List<string>? Sponsors { get; set; }
 
         [JsonPropertyName("streaming_url")]
-        public string StreamingUrl { get; set; }
+        public string? StreamingUrl { get; set; }
     }
 }
