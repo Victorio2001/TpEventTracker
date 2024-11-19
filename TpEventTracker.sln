@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventTracker.Model", " Even
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventTracker.DataSource", "EventTracker.DataSource\EventTracker.DataSource.csproj", "{644B1F62-DE4E-424F-9840-5C3D8D775F61}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xUnit Test Project", "xUnit Test Project\xUnit Test Project.csproj", "{30E22355-3D44-4B9A-84F4-F20F4FE7F571}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{644B1F62-DE4E-424F-9840-5C3D8D775F61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{644B1F62-DE4E-424F-9840-5C3D8D775F61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{644B1F62-DE4E-424F-9840-5C3D8D775F61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30E22355-3D44-4B9A-84F4-F20F4FE7F571}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30E22355-3D44-4B9A-84F4-F20F4FE7F571}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30E22355-3D44-4B9A-84F4-F20F4FE7F571}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30E22355-3D44-4B9A-84F4-F20F4FE7F571}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
