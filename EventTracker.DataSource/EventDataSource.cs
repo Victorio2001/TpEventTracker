@@ -8,7 +8,7 @@ public class EventDataSource : IEventDataSource
 {
     /// <summary>
     /// Ici ma méthode --GetEventFromJSON-- provient du contrat via mon interface --IEventDataSource--.
-    /// Ma méthode viens déserializer mes fichiers json en via mes classes --EventModel && Location Model-- avec leurs props matcher sur les values json.
+    /// Ma méthode viens déserializer mes fichiers json en via mes classes --EventModel && Location Model-- avec leurs props matcher sur les values json des fichiers.
     /// </summary>
     /// <param name="filePath"></param>
     /// <returns></returns>
@@ -33,6 +33,20 @@ public class EventDataSource : IEventDataSource
         catch (JsonException ex)
         {
             throw new Exception("Erreur Json", ex);
+        }
+        catch (Exception ex)
+        {
+            throw new Exception("Erreur inconnue", ex);
+        }
+    }
+    
+    public List<EventModel> GetEventsFromJSON(string filePath)
+    {
+        try
+        {
+            string jsonString = File.ReadAllText(filePath);
+            List<EventModel> events = JsonSerializer.Deserialize<List<EventModel>>(jsonString);
+            return events;
         }
         catch (Exception ex)
         {
