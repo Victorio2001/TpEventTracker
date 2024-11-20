@@ -3,13 +3,15 @@ using EventTracker.DataSource;
 using EventTracker.DataSource.Interfaces;
 using EventTracker.Model;
 
-string filePath = "../EventTracker.DataSource/JsonFiles/Event.json";
 string filesPath = "../EventTracker.DataSource/JsonFiles/Events.json";
 
-
+Console.WriteLine($"Veuillez rentrez le chemin de vôtre fichier json (laisser vide si utiliser default Event)");
+var stringSimpleEvent = Console.ReadLine(); 
+var CheckEmptyString = stringSimpleEvent.Length > 0;
+//condition ? consequent : alternative
+string filePath = CheckEmptyString?  stringSimpleEvent : "../EventTracker.DataSource/JsonFiles/Event.json";
 
 EventDataSource eventDataSource = new EventDataSource();
-
 
 List<EventModel> eventsModel = eventDataSource.GetEventsFromJSON(filesPath);
 void DisplayEvents(List<EventModel> events)
@@ -28,8 +30,6 @@ void DisplayEvents(List<EventModel> events)
     Console.WriteLine("------Affichage events-------");
 }
 DisplayEvents(eventsModel);
-
-
 
 EventModel eventModel = eventDataSource.GetEventFromJSON(filePath);
 void DisplayEvent(EventModel eventModel)
