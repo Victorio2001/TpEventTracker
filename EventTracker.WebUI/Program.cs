@@ -1,7 +1,13 @@
+using EventTracker.DataSource;
+using EventTracker.DataSource.Interfaces;
+using EventTracker.WebUI.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDependencyInjection();
+builder.Services.AddScoped<IEventDataSource, EventDataSource>();
 
 var app = builder.Build();
 

@@ -8,10 +8,24 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form method="post" asp-action="Add" asp-controller="Event">
+        <form method="post" asp-action="Create" asp-controller="Event">
             <div class="form-group">
-                <label asp-for="Eve.Name"></label>
+           
+    
+                <label asp-for="Eve.Name" class="control-label"></label>
                 <input asp-for="Eve.Name" class="form-control" />
+                <span asp-validation-for="Eve.Name" class="text-danger"></span>
+
+                <label asp-for="Eve.Description" class="control-label"></label>
+                <input asp-for="Eve.Description" class="form-control" />
+                <span asp-validation-for="Eve.Description" class="text-danger"></span>
+
+                <label asp-for="Eve.Location.Name">Événement</label>
+                <select asp-for="Eve.Location.Name" class="form-control" asp-items="Model.locations"></select>
+
+                <label asp-for="Eve.MaxParticipants" class="control-label"></label>
+                <input asp-for="Eve.MaxParticipants" class="form-control" />
+                <span asp-validation-for="Eve.MaxParticipants" class="text-danger"></span>
             </div>
             <button type="submit" class="btn btn-primary">Ajouter l'événement</button>
         </form>
