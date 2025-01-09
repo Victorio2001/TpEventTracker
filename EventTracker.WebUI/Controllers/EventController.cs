@@ -29,8 +29,8 @@ public class EventController : Controller
     public IActionResult Index()
     {
         
-        var dataSource = new EventDataSource();
-        var events = dataSource.GetEventsFromJSON("../EventTracker.DataSource/JsonFiles/Events.json");    
+        //var dataSource = new EventDataSource();
+        var events = _eventDataSource.GetEventsFromJSON("../EventTracker.DataSource/JsonFiles/Events.json");    
         
         //List<EventViewModel> modelEvents = new List<EventViewModel>();
         
@@ -59,8 +59,6 @@ public class EventController : Controller
     [HttpGet]
     public IActionResult Create()
     {
-        var dataSource = new EventDataSource();
-        var events = dataSource.GetEventsFromJSON("../EventTracker.DataSource/JsonFiles/Events.json");
 
         AddEventViewModel viewModel = new AddEventViewModel();
         viewModel.locations = GetLocations();
@@ -84,8 +82,7 @@ public class EventController : Controller
 
     private List<SelectListItem> GetLocations()
     {
-        var dataSource = new EventDataSource();
-        var events = dataSource.GetEventsFromJSON("../EventTracker.DataSource/JsonFiles/Events.json");
+        var events = _eventDataSource.GetEventsFromJSON("../EventTracker.DataSource/JsonFiles/Events.json");    
         
         List<SelectListItem> Items = new List<SelectListItem>();
         foreach (var eventmodel in events)
@@ -97,7 +94,7 @@ public class EventController : Controller
                 }
             );
         }
-
+        
         return Items;
     }
 }

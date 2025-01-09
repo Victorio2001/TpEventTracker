@@ -40,7 +40,7 @@ public class EventDataSource : IEventDataSource
         }
     }
     
-    public List<EventModel> GetEventsFromJSON(string filePath)
+    public  IEnumerable<EventModel> GetEventsFromJSON(string filePath)
     {
         try
         {
