@@ -1,3 +1,6 @@
+using EventTracker.DataSource;
+using EventTracker.Model;
+
 namespace xUnit_Test_Project;
 
 public class Tests
@@ -12,9 +15,15 @@ public class Tests
     /// Ici je vais vérifier si un élément de ma liste est un doublon
     /// </summary>
     [Test]
-    public void Test1()
+    public void caca()
     {
-        Assert.Pass();
+        EventDataSource eventDataSource = new EventDataSource();
+        string filePath = "D:\\ProjetCSharp\\TpEventTracker\\EventTracker.DataSource\\JsonFiles\\Event.json";
+        EventModel eventModel = eventDataSource.GetEventFromJSON(filePath);
+      
+        bool PleinLesMecs = eventModel.CurrentParticipants < 1000;
+        Console.WriteLine(PleinLesMecs);
+        Assert.IsTrue(PleinLesMecs, "Le nombre de participants dépasse la limite autorisée (1000).");
     }
     /*
      * public bool IsPrime(int candidate)

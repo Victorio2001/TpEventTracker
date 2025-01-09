@@ -1,0 +1,18 @@
+﻿@using EventTracker.WebUI
+@using EventTracker.WebUI.Models
+@model EventIndexViewModel
+
+    @foreach (var item in Model.Events!)
+    {
+        <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaxParticipants)
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <br>
+           <td>
+               <event-card name="@item.Name">
+               </event-card>
+           </td>
+        </tr>
+    }

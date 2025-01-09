@@ -45,8 +45,8 @@ public class EventDataSource : IEventDataSource
         try
         {
             string jsonString = File.ReadAllText(filePath);
-            List<EventModel> events = JsonSerializer.Deserialize<List<EventModel>>(jsonString);
-            return events;
+            //List<EventModel> events = JsonSerializer.Deserialize<List<EventModel>>(jsonString);
+            return JsonSerializer.Deserialize<List<EventModel>>(jsonString)!;
         }
         catch (Exception ex)
         {
@@ -54,6 +54,7 @@ public class EventDataSource : IEventDataSource
         }
     }
     
+
 //!  https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/deserialization
 /*
 * using System.Text.Json;

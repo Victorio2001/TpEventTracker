@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@using EventTracker.WebUI
+@using EventTracker.WebUI.Models
+@model EventIndexViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers  
+
+<div class="text-center">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Event" asp-action="Create">Créer un nom d'event</a>
+    <h1 class="display-4">Page Event</h1>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => Model.Events![0].Name)
+            </th>
+            <th>
+                Card TagHelpers
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        @await Html.PartialAsync("_partialEvent", Model)
+        <partial name="_partialEvent"/>
+    </table>
+
+
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>

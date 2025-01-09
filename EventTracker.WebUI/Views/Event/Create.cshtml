@@ -1,0 +1,19 @@
+@model AddEventViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+<h1>Create</h1>
+<h4>Movie</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" asp-action="Add" asp-controller="Event">
+            <div class="form-group">
+                <label asp-for="Eve.Name"></label>
+                <input asp-for="Eve.Name" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-primary">Ajouter l'événement</button>
+        </form>
+    </div>
+</div>
