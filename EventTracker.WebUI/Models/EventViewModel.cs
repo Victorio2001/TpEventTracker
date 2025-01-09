@@ -4,6 +4,8 @@ namespace EventTracker.WebUI.Models
 {
     public class EventViewModel
     {
+        [Key]
+        public int id_Event { get; set; }
     
         [StringLength(30)]
         public string? Guid { get; set; }

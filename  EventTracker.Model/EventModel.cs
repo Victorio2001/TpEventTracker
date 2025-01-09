@@ -1,13 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 
 namespace EventTracker.Model
 {
     public class EventModel
     {
+     
+
+
         [JsonPropertyName("guid")]
-        public string? Guid { get; set; }
+        public Guid? Guid { get; set; }
 
         [JsonPropertyName("slug")]
         public string? Slug { get; set; }
@@ -18,8 +23,8 @@ namespace EventTracker.Model
         [JsonPropertyName("date")]
         public DateTime? Date { get; set; }
 
-        [JsonPropertyName("location")]
-        public LocationModel? Location { get; set; }
+
+     
 
         [JsonPropertyName("description")]
         public string? Description { get; set; }
@@ -44,5 +49,9 @@ namespace EventTracker.Model
 
         [JsonPropertyName("streaming_url")]
         public string? StreamingUrl { get; set; }
+
+
+        public int LocationId {get; set;}
+        public LocationModel Location { get; set; }
     }
 }

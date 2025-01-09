@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xUnit Test Project", "xUnit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventTracker.WebUI", "EventTracker.WebUI\EventTracker.WebUI.csproj", "{2A0A2821-630C-4C64-B677-C3681C337643}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventTracker.DataContext", "EventTracker.DataContext\EventTracker.DataContext.csproj", "{DAF3DF03-4878-4DDB-BC57-D14444176D29}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{2A0A2821-630C-4C64-B677-C3681C337643}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A0A2821-630C-4C64-B677-C3681C337643}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A0A2821-630C-4C64-B677-C3681C337643}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAF3DF03-4878-4DDB-BC57-D14444176D29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAF3DF03-4878-4DDB-BC57-D14444176D29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAF3DF03-4878-4DDB-BC57-D14444176D29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAF3DF03-4878-4DDB-BC57-D14444176D29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

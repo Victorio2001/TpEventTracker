@@ -23,5 +23,7 @@ namespace EventTracker.Model
 
         [JsonPropertyName("capacity")]
         public int? Capacity { get; set; }
+        
+        public IList<EventModel> Events { get; set; }
     }
 }

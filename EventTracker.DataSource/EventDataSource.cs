@@ -1,17 +1,29 @@
 ﻿using System.Text.Json;
+using EventTracker.DataContext;
 using EventTracker.DataSource.Interfaces;
 using EventTracker.Model;
+using Microsoft.EntityFrameworkCore;
 
 namespace EventTracker.DataSource;
 
 public class EventDataSource : IEventDataSource
 {
-    /// <summary>
-    /// Ici ma méthode --GetEventFromJSON-- provient du contrat via mon interface --IEventDataSource--.
-    /// Ma méthode viens déserializer mes fichiers json en via mes classes --EventModel && Location Model-- avec leurs props matcher sur les values json des fichiers.
-    /// </summary>
-    /// <param name="filePath"></param>
-    /// <returns></returns>
+    private readonly EventTrackerContext _context;
+
+    public EventDataSource()
+    {
+      
+    }
+    public EventDataSource(EventTrackerContext context)
+    {
+        _context = context;
+    }
+    public async Task AddEventAsync(EventModel Event)
+    {
+        _context.Event.Add(Event);
+        await _context.SaveChangesAsync();
+    }
+ 
     public EventModel GetEventFromJSON(string filePath)
     {
         try
@@ -52,6 +64,11 @@ public class EventDataSource : IEventDataSource
         {
             throw new Exception("Erreur inconnue", ex);
         }
+    }
+    
+    public async Task<IEnumerable<EventModel>> GetAll()
+    {
+        return await _context.Event.ToListAsync();
     }
     
 

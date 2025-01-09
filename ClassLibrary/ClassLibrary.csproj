@@ -6,9 +6,4 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
-    <ItemGroup>
-      <ProjectReference Include="..\ EventTracker.Model\EventTracker.Model.csproj" />
-      <ProjectReference Include="..\EventTracker.DataContext\EventTracker.DataContext.csproj" />
-    </ItemGroup>
-
 </Project>

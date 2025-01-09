@@ -7,32 +7,24 @@ using EventTracker.WebUI.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 
-
 namespace EventTracker.WebUI.Controllers;
 
 public class EventController : Controller
 {
-
     private readonly IEventDataSource _eventDataSource;
     private readonly ILogger<EventController> _logger;
+ 
+
     //! Le contexte de base de données est utilisé dans chacune des méthodes la CRUD du contrôleur.
     public EventController(IEventDataSource eventDataSource, ILogger<EventController> logger)
     {
         _eventDataSource = eventDataSource;
         _logger = logger;
     }
-    
-    /// <summary>
-    /// Ici nous avons 
-    /// </summary>
-    /// <returns></returns>
-    public IActionResult Index()
+
+    public async Task<IActionResult> Index()
     {
-        
-        //var dataSource = new EventDataSource();
-        var events = _eventDataSource.GetEventsFromJSON("../EventTracker.DataSource/JsonFiles/Events.json");    
-        
-        //List<EventViewModel> modelEvents = new List<EventViewModel>();
+        var events = await _eventDataSource.GetAll(); 
         
         EventIndexViewModel viewModel = new EventIndexViewModel();
         viewModel.pageTitle = "Events";
@@ -47,19 +39,12 @@ public class EventController : Controller
             };
             viewModel.Events.Add(eventViewModel);
         }
-
-        /*viewModel.Events = events.Select(e=> new EventViewModel
-        {
-           Name =  e.Name,
-        }).ToList();*/
-        
         return View(viewModel);
     }
     
-    [HttpGet]
+    /*[HttpGet]
     public IActionResult Create()
     {
-
         AddEventViewModel viewModel = new AddEventViewModel();
         viewModel.locations = GetLocations();
   
@@ -76,6 +61,25 @@ public class EventController : Controller
             _logger.LogInformation("Hello World! Logging is {Description}.", "fun");
             var nom = model.Eve.Name;
             Console.WriteLine("Nom: " + nom);
+        }
+        return View(model);
+    }*/
+    
+    [HttpGet]
+    public IActionResult Create()
+    {
+        AddEventViewModel viewModel = new AddEventViewModel();
+        
+        return View(viewModel);
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Create(AddEventViewModel model)
+    {
+        if (ModelState.IsValid)
+        {
+            await _eventDataSource.AddEventAsync();
+            return RedirectToAction(nameof(Index));
         }
         return View(model);
     }

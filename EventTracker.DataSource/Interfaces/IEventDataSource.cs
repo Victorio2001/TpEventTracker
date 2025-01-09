@@ -6,4 +6,8 @@ public interface IEventDataSource
 {
     EventModel GetEventFromJSON(string filePath);
     IEnumerable<EventModel> GetEventsFromJSON(string filePath);
+    Task<IEnumerable<EventModel>> GetAll();
+    Task AddEventAsync(EventModel Event);
+
+
 }
